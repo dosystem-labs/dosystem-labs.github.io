@@ -1,20 +1,26 @@
 {
-	"dosystem-labs": {
-		"name": "dosystem labs",
-		"role": "",
-		"bio": "dosystem 개발자들이 함께 운영하는 기술 블로그 계정입니다.",
-		"github": "dosystem-labs"
-	},
-	"inu-jeong": {
-		"name": "정인우",
-		"role": "차장",
-		"bio": "개발4팀",
-		"github": ""
-	},
-	"hogyun-lee": {
-		"name": "이호균",
-		"role": "사원",
-		"bio": "개발5팀",
-		"github": "sssat"
-	}
+    "dosystem-labs": {
+        "name": "dosystem labs",
+        "role": "",
+        "bio": "dosystem 개발자들이 함께 운영하는 기술 블로그 계정입니다.",
+        "github": "dosystem-labs"
+    },
+    "inu-jeong": {
+        "name": "정인우",
+        "role": "차장",
+        "bio": "개발4팀",
+        "github": ""
+    },
+    "hyunmin-choo": {
+        "name": "추현민",
+        "role": "사원",
+        "bio": "개발2팀",
+        "github": ""
+    },
+    "hogyun-lee": {
+        "name": "이호균",
+        "role": "사원",
+        "bio": "개발5팀",
+        "github": "sssat"
+    }
 }
