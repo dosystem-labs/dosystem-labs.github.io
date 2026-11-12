@@ -5,7 +5,7 @@ pubDate: '2026-11-13'
 category: 'study'
 tags: ['Postman', 'API 명세', 'HTTP', '2주 차']
 author: 'hyunmin-choo'
-draft: true
+draft: false
 ---
 
 멘토링 1주차와 2주차에 명시된 Postman 사용과 HTTP 요청과 응답 설계에 대해 알아보고 웹 페이지 문서로 테스트와 명세서를 한 곳에서 봅니다.
