@@ -1,6 +1,6 @@
 ---
-title: '[멘토링 2주차] Spring Boot 기초'
-description: 'Spring IoC/DI, Bean, 레이어드 아키텍처 학습 과정'
+title: '[멘토링 2주차] Spring의 객체 관리와 레이어드 아키텍처'
+description: 'Spring IoC/DI, Bean의 개념과 계층 간 관계 이해하기'
 pubDate: 2026-11-12
 author: hogyun-lee
 category: 'study'
