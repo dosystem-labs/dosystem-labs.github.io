@@ -10,5 +10,11 @@
 		"role": "차장",
 		"bio": "개발4팀",
 		"github": ""
+	},
+	"hogyun-lee": {
+		"name": "이호균",
+		"role": "사원",
+		"bio": "개발5팀",
+		"github": "sssat"
 	}
 }
