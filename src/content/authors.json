@@ -28,5 +28,11 @@
         "role": "대리",
         "bio": "개발1팀",
         "github": ""
+    },
+    "dogyeom-kim": {
+        "name": "김도겸",
+        "role": "주임",
+        "bio": "개발3팀",
+        "github": ""
     }
 }
