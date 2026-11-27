@@ -39,7 +39,7 @@ public void increaseView() {
 
 **=> 2의 조회수가 사라짐**
 
-하지만 DB에서 연산을 수행하면 트랜잭션이 종료되기 전까지 DB가 해당 데이터에 Lock을 걸어 동시 접근을 막아주기 때문에 조회수 증가 메서드를 Repository 쿼리 메서드로 변경하여 DB에서 연산이 수행되도록 수정했다.
+이를 해결하기 위해 Repository 쿼리 메서드를 사용하여 viewCount = viewCount + 1 연산을 하나의 update 쿼리에서 실행하도록 수정했다. 이때 db에서 해당 행에 대한 Lock이 적용되어 현재 트랜잭션이 commit되기 전까지 다른 트랜잭션의 update 쿼리가 대기하게 된다. 이후 최신 조회수 값을 기준으로 연산을 수행하기 때문에 조회수가 누락되지 않는다.
 
 - 수정된 메서드
 ```java
@@ -73,7 +73,7 @@ int increaseViewCount(@Param("postId") Long postId, @Param("memberId") Long memb
 
 ```java
 @Test
-@DisplayName("여러 사용자가 특정 게시글에 동시에 접속할 때 조회수가 사용자의 수만큼 증가한다.")
+@DisplayName("동일한 회원의 100개 동시 조회 요청에서 조회수가 정확히 증가한다.")
 void getPostDetail_ConcurrentViews() throws Exception {
 
     // 동시 접속할 사용자 수(스레드 수) 설정
@@ -176,7 +176,10 @@ Repository를 통해 게시글을 조회해보고 최신 viewCount 값을 받아
 
 ### (1) DB 조회수 확인
 
-application-test.properties의 spring.jpa.hibernate.ddl-auto 값을 update로 설정하면 db에서 실제 값을 확인할 수 있다.
+테스트 db의 테이블을 유지하기 위해 application-test.properties의 spring.jpa.hibernate.ddl-auto 값을 update로 설정했다. 
+
+다만 현재는 @AfterEach를 통해 테스트 종료 후 생성한 데이터를 삭제하도록 구현했기 때문에, 테스트 결과는 조회수를 확인하기 위해 @AfterEach를 주석 처리하고 진행했다.
+
 ![](../images/leehk-week04/image4.png)
 
 ![](../images/leehk-week04/image1.png)
